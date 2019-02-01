@@ -3,7 +3,7 @@ import torchvision
 from torchvision.transforms import *
 
 
-class NoisyCIFAR10():
+class NoisyCIFAR10Dataset():
     '''Dataset class that adds noise to cifar10-images'''
     def __init__(self,
                  data_root,

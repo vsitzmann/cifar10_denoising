@@ -5,3 +5,11 @@ The training script and "DenoisingUnet" class handle:
 1. checkpointing
 2. Logging with tensorboardx
 3. Writing evaluation results to disk
+
+## Usage
+### Installation
+This code was developed in python 3.7 and Pytorch 1.0 (defaults to running on GPU). I recommend using anaconda for dependency management. 
+You can create an environment with name "pytorch_starter" and all the dependencies necessary to run this code like so:
+```
+conda env create -f src/environment.yml
+```

@@ -2,7 +2,7 @@ import argparse
 import os, datetime
 import torch
 
-from dataio import NoisyCifar10Loader
+from dataio import NoisyCIFAR10Dataset
 from torch.utils.data import DataLoader
 from denoising_unet import DenoisingUnet
 from tensorboardX import SummaryWriter
@@ -112,7 +112,7 @@ def train(model, dataset):
 
 
 def main():
-    dataset = NoisyCifar10Loader(data_root=opt.data_root,
+    dataset = NoisyCIFAR10Dataset(data_root=opt.data_root,
                                  sigma=opt.sigma,
                                  train=opt.train_test == 'train')
     model = DenoisingUnet(img_sidelength=32)
