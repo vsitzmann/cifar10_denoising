@@ -12,12 +12,7 @@ from pytorch_prototyping.pytorch_prototyping import *
 
 
 def num_divisible_by_2(number):
-    i = 0
-    while not number % 2:
-        number = number // 2
-        i += 1
-
-    return i
+    return np.floor(np.log2(number)).astype(int)
 
 
 def get_num_net_params(net):
